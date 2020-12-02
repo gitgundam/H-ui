@@ -12,9 +12,12 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gitgundam/H-ui/issues"
   },
-  "homepage": "https://github.com/gitgundam/H-ui#readme"
+  "homepage": "https://github.com/gitgundam/H-ui#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
 }
