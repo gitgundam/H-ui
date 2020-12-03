@@ -1,5 +1,5 @@
 <template>
-  <button :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
+  <button :class="{[`icon-${iconPosition}`]: true}" class="h-button" @click="$emit('click')">
     <h-icon v-if="icon && !isLoading" class="icon" :name="icon"></h-icon>
     <h-icon v-if="isLoading" class="loading icon" name="loading"></h-icon>
     <slot></slot>
@@ -23,7 +23,12 @@ export default {
 
     }
 
-  }
+  },
+  // computed:{
+  //   loading(){
+  //     return this.isLoading
+  //   }
+  // }
 };
 </script>
 
@@ -53,6 +58,7 @@ button {
 
   &:hover {
     border: 1px solid $button-color-hover;
+    transition: all .3s;
   }
 
   &:active {

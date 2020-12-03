@@ -4,7 +4,11 @@
     <h-button icon="setting" icon-position="right">设置</h-button>
     <h-button icon="setting">加载中</h-button>
     <h-button icon="setting" :is-loading="loading" @click="loading=!loading">状态切换</h-button>
-
+    <h-button-group>
+      <h-button icon="left">上一页</h-button>
+      <h-button>更多</h-button>
+      <h-button icon="right" icon-position="right">下一页</h-button>
+    </h-button-group>
 
   </div>
 </template>
