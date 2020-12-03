@@ -10,8 +10,12 @@
 export default {
   props: {icon:{},
     iconPosition:{
-     type: String,
-      default: 'left'
+      type: String,
+      default: 'left',
+      validator(value) {
+        return !(value !== 'left' && value !== 'right');
+      }
+
     }
 
 }
