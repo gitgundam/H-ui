@@ -7,6 +7,6 @@ Vue.component('h-button', Button);
 Vue.component('h-icon', Icon);
 
 new Vue({
-  render: h => h(App)
+  render: h => h(App),
 }).$mount('#app');
 

@@ -1,16 +1,20 @@
 <template>
-  <button :class="{[`icon-${iconPosition}`]: true}">
-    <h-icon v-if="icon" :name="icon"></h-icon>
-    <h-icon v-if="icon" class="loading" name="loading"></h-icon>
-
+  <button :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
+    <h-icon v-if="icon && !isLoading" class="icon" :name="icon"></h-icon>
+    <h-icon v-if="isLoading" class="loading icon" name="loading"></h-icon>
     <slot></slot>
   </button>
 </template>
 
 <script>
 export default {
-  props: {icon:{},
-    iconPosition:{
+  props: {
+    icon: {},
+    isLoading: {
+      type: Boolean,
+      default: false
+    },
+    iconPosition: {
       type: String,
       default: 'left',
       validator(value) {
@@ -19,7 +23,7 @@ export default {
 
     }
 
-}
+  }
 };
 </script>
 
@@ -42,7 +46,7 @@ button {
   border-radius: $border-radius;
   vertical-align: middle;
   display: inline-flex;
-  padding: 0 1em;
+  padding: 0 0.8em;
   cursor: pointer;
   justify-content: center;
   align-items: center;
