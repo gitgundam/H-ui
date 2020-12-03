@@ -1,6 +1,8 @@
 <template>
   <button :class="{[`icon-${iconPosition}`]: true}">
-  <h-icon v-if="icon" :name="icon"></h-icon>
+    <h-icon v-if="icon" :name="icon"></h-icon>
+    <h-icon v-if="icon" class="loading" name="loading"></h-icon>
+
     <slot></slot>
   </button>
 </template>
@@ -24,6 +26,14 @@ export default {
 <style lang="scss">
 @import '../assets/style/helper';
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 button {
   font-size: $font-size;
   height: $button-height;
@@ -52,13 +62,17 @@ button {
   > .icon {
     margin-right: .3em;
   }
-  &.icon-right{
-    >.icon{
+
+  &.icon-right {
+    > .icon {
       order: 2;
       margin-right: 0;
       margin-left: .3em;
     }
   }
 
+  .loading {
+    animation: spin 2s linear infinite;
+  }
 }
 </style>
