@@ -1,11 +1,10 @@
 <template>
   <button :class="{[`icon-${iconPosition}`]: true}">
-    <svg v-if="icon" class="icon">
-      <use :xlink:href=`#i-${icon}`></use>
-    </svg>
+  <h-icon v-if="icon" :name="icon"></h-icon>
     <slot></slot>
   </button>
 </template>
+
 <script>
 export default {
   props: {icon:{},
@@ -23,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'assets/style/helper.scss';
+@import '../assets/style/helper';
 
 button {
   font-size: $font-size;
@@ -51,8 +50,6 @@ button {
   }
 
   > .icon {
-    width: 1.5em;
-    height: 1.5em;
     margin-right: .3em;
   }
   &.icon-right{
