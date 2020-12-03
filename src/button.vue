@@ -8,7 +8,13 @@
 </template>
 <script>
 export default {
-  props: ['icon', 'iconPosition']
+  props: {icon:{},
+    iconPosition:{
+     type: String,
+      default: 'left'
+    }
+
+}
 };
 </script>
 
@@ -16,21 +22,28 @@ export default {
 @import 'assets/style/helper.scss';
 
 button {
+  font-size: $font-size;
+  height: $button-height;
+  background: $button-bg;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
   vertical-align: middle;
   display: inline-flex;
-  font-size: 10px;
   padding: 0 1em;
   cursor: pointer;
   justify-content: center;
   align-items: center;
 
   &:hover {
+    border: 1px solid $button-color-hover;
   }
 
   &:active {
+    background: $button-color-active;
   }
 
   &:focus {
+    outline: none;
   }
 
   > .icon {
