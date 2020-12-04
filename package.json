@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/gitgundam/H-ui#readme",
   "dependencies": {
+    "chai": "^4.2.0",
     "sass": "^1.29.0",
     "vue": "^2.6.12",
     "vue-hot-reload-api": "^2.3.4"

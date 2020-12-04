@@ -2,7 +2,9 @@
   <button :class="{[`icon-${iconPosition}`]: true}" class="h-button" @click="$emit('click')">
     <h-icon v-if="icon && !isLoading" class="icon" :name="icon"></h-icon>
     <h-icon v-if="isLoading" class="loading icon" name="loading"></h-icon>
-    <slot></slot>
+    <div class="content">
+      <slot></slot>
+    </div>
   </button>
 </template>
 
@@ -24,11 +26,6 @@ export default {
     }
 
   },
-  // computed:{
-  //   loading(){
-  //     return this.isLoading
-  //   }
-  // }
 };
 </script>
 
@@ -43,6 +40,7 @@ export default {
     transform: rotate(360deg);
   }
 }
+
 button {
   font-size: $font-size;
   height: $button-height;
@@ -68,12 +66,18 @@ button {
   &:focus {
     outline: none;
   }
-
+ >.content{
+   order: 2;
+ }
   > .icon {
+    order: 1;
     margin-right: .3em;
   }
 
   &.icon-right {
+    >.content{
+      order: 1;
+    }
     > .icon {
       order: 2;
       margin-right: 0;

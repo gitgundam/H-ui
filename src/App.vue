@@ -9,7 +9,7 @@
       <h-button>更多</h-button>
       <h-button icon="right" icon-position="right">下一页</h-button>
     </h-button-group>
-
+    <h-input></h-input>
   </div>
 </template>
 <script>
