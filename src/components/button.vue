@@ -1,5 +1,6 @@
 <template>
-  <button :class="{[`icon-${iconPosition}`]: true}" class="h-button" @click="$emit('click')">
+  <button :class="{[`icon-${iconPosition}`]: true}" class="h-button"
+          @click="$emit('click')">
     <h-icon v-if="icon && !isLoading" class="icon" :name="icon"></h-icon>
     <h-icon v-if="isLoading" class="loading icon" name="loading"></h-icon>
     <div class="content">
@@ -41,7 +42,7 @@ export default {
   }
 }
 
-button {
+.h-button {
   font-size: $font-size;
   height: $button-height;
   background: $button-bg;

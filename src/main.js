@@ -29,3 +29,36 @@ new Vue({
   const href = useElement.getAttribute('xlink:href')
   expect(href).to.equal('#i-setting')
 }
+{
+  const Constructor = Vue.extend(Button)
+  const button = new Constructor({
+    propsData:{
+      icon: 'setting',
+      isLoading: true
+    }
+  })
+  button.$mount()
+  const useElement = button.$el.querySelector('use')
+  const href = useElement.getAttribute('xlink:href')
+  expect(href).to.equal('#i-loading')
+
+}
+
+{
+  const div = document.createElement('div')
+  document.body.appendChild(div)
+  const Constructor = Vue.extend(Button)
+  const button = new Constructor({
+    propsData:{
+      icon: 'setting'
+    }
+  })
+  button.$mount(div)
+  const svg = button.$el.querySelector('svg')
+  const order = window.getComputedStyle(svg).order
+  expect(order).to.equal('1')
+  button.$el.remove()
+  button.$destroy()
+
+}
+
