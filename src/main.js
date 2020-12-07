@@ -7,6 +7,7 @@ import Input from './components/Input';
 import chai from 'chai'
 import spies from 'chai-spies'
 chai.use(spies)
+
 Vue.component('h-button', Button);
 Vue.component('h-icon', Icon);
 Vue.component('h-button-group', ButtonGroup);
