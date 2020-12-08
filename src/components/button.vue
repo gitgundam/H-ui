@@ -14,7 +14,10 @@ import icon from './icon';
 
 export default {
   props: {
-    icon: {},
+    icon: {
+      type: String,
+      default: 'setting'
+    },
     isLoading: {
       type: Boolean,
       default: false
@@ -25,8 +28,8 @@ export default {
       validator(value) {
         return !(value !== 'left' && value !== 'right');
       }
+    },
 
-    }
   },
   components: {
     'h-icon': icon
@@ -75,17 +78,19 @@ export default {
   > .content {
     order: 2;
   }
-
   > .icon {
     order: 1;
-    margin-right: .3em;
+  }
+  > .icon-left{
+    > .icon{
+      margin-right: .3em;
+    }
   }
 
   &.icon-right {
     > .content {
       order: 1;
     }
-
     > .icon {
       order: 2;
       margin-right: 0;
