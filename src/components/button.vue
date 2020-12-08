@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import icon from './icon';
+
 export default {
   props: {
     icon: {},
@@ -25,9 +27,11 @@ export default {
       }
 
     }
-
   },
-};
+  components: {
+    'h-icon': icon
+  }
+}
 </script>
 
 <style lang="scss">
@@ -67,18 +71,21 @@ export default {
   &:focus {
     outline: none;
   }
- >.content{
-   order: 2;
- }
+
+  > .content {
+    order: 2;
+  }
+
   > .icon {
     order: 1;
     margin-right: .3em;
   }
 
   &.icon-right {
-    >.content{
+    > .content {
       order: 1;
     }
+
     > .icon {
       order: 2;
       margin-right: 0;
