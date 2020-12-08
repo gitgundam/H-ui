@@ -27,12 +27,12 @@ describe('Button', () => {
     const vm = new Constructor({
       propsData: {
         icon: 'setting',
-        loading: true
+        isLoading: true
       }
     }).$mount()
     const useElements = vm.$el.querySelectorAll('use')
     expect(useElements.length).to.equal(1)
-    expect(useElements[0].getAttribute('xlink:href')).to.equal('#i-setting')
+    expect(useElements[0].getAttribute('xlink:href')).to.equal('#i-loading')
     vm.$destroy()
   })
   it('icon 默认的 order 是 1', () => {
@@ -76,6 +76,6 @@ describe('Button', () => {
     vm.$on('click', callback)
     vm.$el.click()
     expect(callback).to.have.been.called
-
   })
+
 })

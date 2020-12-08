@@ -13,7 +13,7 @@
     <h-button icon="setting" ></h-button>
     <h-input disabled value="张三" error="请输入名称"></h-input>
     <h-input readonly value="李四"></h-input>
-
+    <h-input @change="a"></h-input>
   </div>
 </template>
 <script>
@@ -22,7 +22,14 @@ export default {
     return {
       loading: false
     };
+  },
+  methods:{
+    a(e){
+      console.log(e);
+    }
+
   }
+
 };
 </script>
 
