@@ -1,12 +1,32 @@
 <template>
-  <div class="row">
+  <div class="row" :style = "rowStyle">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'H-row'
+  name: 'H-row',
+  props:{
+    gutter:{
+      type:[Number,String],
+      default: 0
+    }
+  },
+  mounted() {
+    this.$children.forEach(vm=>{
+      vm.gutter = this.gutter
+    })
+  },
+  computed:{
+    rowStyle(){
+      return {
+        marginLeft: -this.gutter / 2 + 'px',
+        marginRight: -this.gutter / 2 + 'px'
+      }
+    }
+  }
+
 }
 </script>
 
@@ -16,12 +36,4 @@ export default {
   display: flex;
 }
 
-
-.col[data-span = '2'] {
-  width: 8.333333%;
-}
-
-.col[data-span = '22'] {
-  width: 91.666667%;
-}
 </style>

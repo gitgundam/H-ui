@@ -14,19 +14,32 @@
     <h-input disabled value="张三" error="请输入名称"></h-input>
     <h-input readonly value="李四"></h-input>
     <h-input></h-input>
-    <h-row>
-      <h-col></h-col>
-      <h-col></h-col>
-    </h-row>
-    <h-row>
-      <h-col></h-col>
-      <h-col></h-col>
-      <h-col></h-col>
-    </h-row>
-    <h-row>
-      <h-col span="2"></h-col>
-      <h-col span="22"></h-col>
-    </h-row>
+    <div style="border: 1px solid deeppink">
+      <h-row gutter="20">
+        <h-col>
+        </h-col>
+        <h-col></h-col>
+      </h-row>
+      <h-row gutter="30">
+        <h-col offset="1"></h-col>
+        <h-col offset="1"></h-col>
+        
+      </h-row>
+      <h-row gutter="2">
+        <h-col span="2"></h-col>
+        <h-col span="22" offset="2"></h-col>
+      </h-row>
+      <h-row gutter="20">
+        <h-col></h-col>
+        <h-col></h-col>
+        <h-col></h-col>
+        <h-col></h-col>
+        <h-col></h-col>
+
+        <h-col></h-col>
+
+      </h-row>
+    </div>
   </div>
 </template>
 <script>
@@ -41,8 +54,8 @@ export default {
 
 <style lang="scss">
 * {
-  margin: 0;
-  padding: 0;
+  //margin: 0;
+  //padding: 0;
   box-sizing: border-box;
 }
 
