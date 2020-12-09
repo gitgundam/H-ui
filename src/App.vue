@@ -24,11 +24,8 @@
       <h-col></h-col>
     </h-row>
     <h-row>
-      <h-col></h-col>
-      <h-col></h-col>
-      <h-col></h-col>
-      <h-col></h-col>
-
+      <h-col span="2"></h-col>
+      <h-col span="22"></h-col>
     </h-row>
   </div>
 </template>

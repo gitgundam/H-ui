@@ -5,7 +5,9 @@
 </template>
 
 <script>
-
+export default {
+  name: 'H-row'
+}
 </script>
 
 <style scoped lang="scss">

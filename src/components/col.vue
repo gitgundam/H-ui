@@ -1,11 +1,18 @@
 <template>
-  <div class="col">
+  <div class="col" :class="`col-${span}`">
     <slot></slot>
   </div>
 </template>
 
 <script>
-
+  export default {
+    name: 'H-col',
+    props:{
+      span:{
+        type:[Number,String]
+      }
+    }
+  }
 </script>
 
 <style scoped lang="scss">
