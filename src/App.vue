@@ -10,10 +10,26 @@
       <h-button>更多</h-button>
       <h-button icon="right" icon-position="right">下一页</h-button>
     </h-button-group>
-    <h-button icon="setting" ></h-button>
+    <h-button icon="setting"></h-button>
     <h-input disabled value="张三" error="请输入名称"></h-input>
     <h-input readonly value="李四"></h-input>
-    <h-input @change="a"></h-input>
+    <h-input></h-input>
+    <h-row>
+      <h-col></h-col>
+      <h-col></h-col>
+    </h-row>
+    <h-row>
+      <h-col></h-col>
+      <h-col></h-col>
+      <h-col></h-col>
+    </h-row>
+    <h-row>
+      <h-col></h-col>
+      <h-col></h-col>
+      <h-col></h-col>
+      <h-col></h-col>
+
+    </h-row>
   </div>
 </template>
 <script>
@@ -22,19 +38,12 @@ export default {
     return {
       loading: false
     };
-  },
-  methods:{
-    a(e){
-      console.log(e);
-    }
-
   }
-
 };
 </script>
 
 <style lang="scss">
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
