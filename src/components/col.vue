@@ -57,6 +57,9 @@ export default {
       margin-left: ($n/24)*100%;
     }
   }
+  @media(max-width: 576px){
+
+  }
 }
 
 </style>

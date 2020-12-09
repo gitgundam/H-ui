@@ -23,21 +23,24 @@
       <h-row gutter="30">
         <h-col offset="1"></h-col>
         <h-col offset="1"></h-col>
-        
+
       </h-row>
       <h-row gutter="2">
         <h-col span="2"></h-col>
         <h-col span="22" offset="2"></h-col>
       </h-row>
-      <h-row gutter="20">
+      <h-row>
+        <h-col offset="1"></h-col>
         <h-col></h-col>
         <h-col></h-col>
         <h-col></h-col>
         <h-col></h-col>
         <h-col></h-col>
-
-        <h-col></h-col>
-
+      </h-row>
+      <h-row>
+        <h-col span="1"></h-col>
+        <h-col span="2"></h-col>
+        <h-col span="21"></h-col>
       </h-row>
     </div>
   </div>
