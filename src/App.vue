@@ -16,31 +16,14 @@
     <h-input></h-input>
     <div style="border: 1px solid deeppink">
       <h-row gutter="20">
-        <h-col>
-        </h-col>
-        <h-col></h-col>
-      </h-row>
-      <h-row gutter="30">
-        <h-col offset="1"></h-col>
-        <h-col offset="1"></h-col>
-
-      </h-row>
-      <h-row gutter="2">
-        <h-col span="2"></h-col>
-        <h-col span="22" offset="2"></h-col>
-      </h-row>
-      <h-row>
-        <h-col offset="1"></h-col>
-        <h-col></h-col>
-        <h-col></h-col>
         <h-col></h-col>
         <h-col></h-col>
         <h-col></h-col>
       </h-row>
-      <h-row>
-        <h-col span="1"></h-col>
-        <h-col span="2"></h-col>
-        <h-col span="21"></h-col>
+      <h-row gutter="20">
+        <h-col :phone="{span: 24}"></h-col>
+        <h-col :phone="{span: 24}"></h-col>
+        <h-col></h-col>
       </h-row>
     </div>
   </div>
@@ -57,8 +40,8 @@ export default {
 
 <style lang="scss">
 * {
-  //margin: 0;
-  //padding: 0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
