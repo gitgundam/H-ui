@@ -15,10 +15,16 @@
     <h-input readonly value="李四"></h-input>
     <h-input></h-input>
     <div style="border: 1px solid deeppink">
-      <h-row gutter="20">
-        <h-col></h-col>
-        <h-col></h-col>
-        <h-col></h-col>
+      <h-row>
+        <h-col>
+          <h-row align="center">
+            <h-col>1</h-col>
+            <h-col>2</h-col>
+            <h-col>3</h-col>
+          </h-row>
+        </h-col>
+        <h-col>2</h-col>
+        <h-col>3</h-col>
       </h-row>
       <h-row gutter="20">
         <h-col :phone="{span: 24}"></h-col>

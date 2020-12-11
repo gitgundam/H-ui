@@ -2,7 +2,6 @@
   <div class="col"
        :class="colClass"
        :style="colStyle">
-    <div style="border: 1px solid green;height: 100%;background: #c3daef">1</div>
     <slot></slot>
   </div>
 </template>
@@ -61,6 +60,7 @@ export default {
 
 <style scoped lang="scss">
 .col {
+  border: 1px solid red;
   height: 100px;
   width: 50%;
   $class-prefix: col-;
