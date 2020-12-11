@@ -14,24 +14,19 @@
     <h-input disabled value="张三" error="请输入名称"></h-input>
     <h-input readonly value="李四"></h-input>
     <h-input></h-input>
-    <div style="border: 1px solid deeppink">
-      <h-row>
-        <h-col>
-          <h-row align="center">
-            <h-col>1</h-col>
-            <h-col>2</h-col>
-            <h-col>3</h-col>
-          </h-row>
-        </h-col>
-        <h-col>2</h-col>
-        <h-col>3</h-col>
-      </h-row>
-      <h-row gutter="20">
-        <h-col :phone="{span: 24}"></h-col>
-        <h-col :phone="{span: 24}"></h-col>
-        <h-col></h-col>
-      </h-row>
-    </div>
+    <h-layout>
+      <h-header class="demo"></h-header>
+      <h-content class="demo"></h-content>
+      <h-footer class="demo"></h-footer>
+    </h-layout>
+    <h-layout>
+      <h-sider class="demo">sider</h-sider>
+      <h-layout>
+        <h-header class="demo">header</h-header>
+        <h-content class="demo">content</h-content>
+        <h-footer class="demo">footer</h-footer>
+      </h-layout>
+    </h-layout>
   </div>
 </template>
 <script>
@@ -45,6 +40,11 @@ export default {
 </script>
 
 <style lang="scss">
+.demo {
+  border: 1px solid #333;
+  min-height: 100px;
+}
+
 * {
   margin: 0;
   padding: 0;
